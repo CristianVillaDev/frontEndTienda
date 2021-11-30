@@ -29,7 +29,8 @@ $(document).ready(function(){
 
 		$.ajax({
 	            type: "POST",
-	            url:"http://localhost:8080/usuarios/guardar",
+				url:"http://52.14.249.159:8080/microservicioProductos/usuarios/guardar",
+	            //url:"http://localhost:8080/usuarios/guardar",
 	            async: false,
 	            data: JSON.stringify({ cedulaUsuario: $("#cedula").val(), emailUsuario: $("#email").val(),nombreUsuario:$("#nombre").val(),password: $("#clave").val(), usuario: $("#usuario").val()}),
 	            contentType: "application/json",

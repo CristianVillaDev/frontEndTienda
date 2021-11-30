@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	console.log('Funcionando');
+	console.log('Funcionando usuarios');
 	
 	var data=0;
 	
@@ -80,12 +80,14 @@ $(document).ready(function(){
 		let mensaje ='';
 		let boton ='';
 		if(flag){
-			url = "http://localhost:8080/usuarios/actualizar/"+cedula;
+			url:"http://52.14.249.159:8080/microservicioProductos/usuarios/actualizar/"+cedula,
+			//url = "http://localhost:8080/usuarios/actualizar/"+cedula;
 			type= "PUT";
 			mensaje="Datos del Usuario Actualizados";	
 			boton = "crear";
 		}else{
-			url = "http://localhost:8080/usuarios/guardar";
+			url:"http://52.14.249.159:8080/microservicioProductos/usuarios/actualizar/"+cedula,
+			//url = "http://localhost:8080/usuarios/guardar";
 			type= "POST";
 			mensaje="Usuario Creado";
 			boton = "crear";
@@ -133,7 +135,8 @@ $(document).ready(function(){
 		
 	    $.ajax({
 	        type: "GET",
-	        url: "http://localhost:8080/usuarios/listar",  
+			url:"http://52.14.249.159:8080/microservicioProductos/usuarios/listar",
+	        //url: "http://localhost:8080/usuarios/listar",  
 	        success: function(data) {
 		
 				const usuarios = data;
@@ -167,7 +170,8 @@ $(document).ready(function(){
 		
  		$.ajax({
 			type:"DELETE",
-			url: "http://localhost:8080/usuarios/eliminar/"+cedula,
+			url:"http://52.14.249.159:8080/microservicioProductos/usuarios/eliminar/"+cedula,
+			//url: "http://localhost:8080/usuarios/eliminar/"+cedula,
 			success: function(response){
 				listado();
 				alert("Datos del Usuario Borrados");
@@ -194,7 +198,8 @@ $(document).ready(function(){
 		
 		 $.ajax({
 			type:"GET",
-			url: "http://localhost:8080/usuarios/listar/"+cedula_usuario,
+			url:"http://52.14.249.159:8080/microservicioProductos/usuarios/listar/"+cedula_usuario,
+			//url: "http://localhost:8080/usuarios/listar/"+cedula_usuario,
 			success: function(response){
 				
 				console.log(response);
@@ -237,7 +242,8 @@ $(document).ready(function(){
 		
 			$.ajax({
 				type:"GET",
-				url: "http://localhost:8080/usuarios/listar/"+cedula_usuario,
+				url:"http://52.14.249.159:8080/microservicioProductos/usuarios/listar/"+cedula_usuario,
+				//url: "http://localhost:8080/usuarios/listar/"+cedula_usuario,
 				success: function(response){
 					const usuario = response[0];
 						

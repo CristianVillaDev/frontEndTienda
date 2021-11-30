@@ -67,7 +67,8 @@ $(document).ready(function(){
 
 		$.ajax({
 	            type: "POST",
-	            url: "http://localhost:8080/productos/guardar",
+				url:"http://52.14.249.159:8080/microservicioProductos/productos/guardar",
+	           	//url: "http://localhost:8080/productos/guardar",
 	            dataType: "html",
                 data: form_data,
 				contentType: false, 
