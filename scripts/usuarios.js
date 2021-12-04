@@ -70,24 +70,22 @@ $(document).ready(function(){
 		};
 		
 		const cedula =  $("#cedula").val();
-		
 		var getUrl = window.location;
-		//var baseUrl = getUrl.protocol + "//"+getUrl.host+"/"+getUrl.pathname.split('/')[1];
 		var baseUrl = getUrl.protocol + "//"+getUrl.host;
+
 		console.log(baseUrl);
+		
 		let url = '';
 		let type= '';
 		let mensaje ='';
 		let boton ='';
 		if(flag){
-			url:"http://52.14.249.159:8080/microservicioProductos/usuarios/actualizar/"+cedula,
-			//url = "http://localhost:8080/usuarios/actualizar/"+cedula;
+			url = "http://localhost:8080/usuarios/actualizar/"+cedula;
 			type= "PUT";
 			mensaje="Datos del Usuario Actualizados";	
 			boton = "crear";
 		}else{
-			url:"http://52.14.249.159:8080/microservicioProductos/usuarios/actualizar/"+cedula,
-			//url = "http://localhost:8080/usuarios/guardar";
+			url = "http://localhost:8080/usuarios/guardar";
 			type= "POST";
 			mensaje="Usuario Creado";
 			boton = "crear";
@@ -135,8 +133,7 @@ $(document).ready(function(){
 		
 	    $.ajax({
 	        type: "GET",
-			url:"http://52.14.249.159:8080/microservicioProductos/usuarios/listar",
-	        //url: "http://localhost:8080/usuarios/listar",  
+	        url: "http://localhost:8080/usuarios/listar",  
 	        success: function(data) {
 		
 				const usuarios = data;
@@ -170,8 +167,7 @@ $(document).ready(function(){
 		
  		$.ajax({
 			type:"DELETE",
-			url:"http://52.14.249.159:8080/microservicioProductos/usuarios/eliminar/"+cedula,
-			//url: "http://localhost:8080/usuarios/eliminar/"+cedula,
+			url: "http://localhost:8080/usuarios/eliminar/"+cedula,
 			success: function(response){
 				listado();
 				alert("Datos del Usuario Borrados");
@@ -198,8 +194,7 @@ $(document).ready(function(){
 		
 		 $.ajax({
 			type:"GET",
-			url:"http://52.14.249.159:8080/microservicioProductos/usuarios/listar/"+cedula_usuario,
-			//url: "http://localhost:8080/usuarios/listar/"+cedula_usuario,
+			url: "http://localhost:8080/usuarios/listar/"+cedula_usuario,
 			success: function(response){
 				
 				console.log(response);

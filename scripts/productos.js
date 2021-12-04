@@ -45,7 +45,7 @@ $(document).ready(function(){
 		
 	}else{
 		
-		//Administrador - no puede a 
+		//Administrador - no puede acceder al boton editar
 		var btn = $("#editar");
 		btn.css("display","none");
 		
@@ -67,8 +67,7 @@ $(document).ready(function(){
 
 		$.ajax({
 	            type: "POST",
-				url:"http://52.14.249.159:8080/microservicioProductos/productos/guardar",
-	           	//url: "http://localhost:8080/productos/guardar",
+				url:"http://localhost:8080/productos/guardar",
 	            dataType: "html",
                 data: form_data,
 				contentType: false, 

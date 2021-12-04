@@ -79,11 +79,11 @@ $(document).ready(function(){
 		var baseUrl = getUrl.protocol + "//"+getUrl.host+"/"+getUrl.pathname.split('/')[1];
 		
 		if(flag){
-			url = "http://52.14.249.159:8080/microservicioClientes/clientes/actualizar/"+cedula;
+			url = "http://localhost:8080/clientes/actualizar/"+cedula;
 			type= "PUT";
 			mensaje="Datos del Usuario Actualizados";	
 		}else{
-			url = "http://52.14.249.159:8080/microservicioClientes/clientes/guardar";
+			url = "http://localhost:8080/clientes/guardar";
 			type= "POST";
 			mensaje="Usuario Creado";
 		}
@@ -128,7 +128,7 @@ $(document).ready(function(){
 		console.log("listar");
 	   $.ajax({
 	        type: "GET",
-	        url: "http://52.14.249.159:8080/microservicioClientes/clientes/listar",  
+	        url: "http://localhost:8080/clientes/listar",  
 	        success: function(data) {
 				const clientes = data;
 				console.log(clientes);
@@ -159,7 +159,7 @@ $(document).ready(function(){
 		var baseUrl = getUrl.protocol + "//"+getUrl.host+"/"+getUrl.pathname.split('/')[1];
  		$.ajax({
 			type:"DELETE",
-			url: "http://52.14.249.159:8080/microservicioClientes/clientes/eliminar/"+cedula,
+			url: "http://localhost:8080/clientes/eliminar/"+cedula,
 			success: function(response){
 				listado();
 				alert("Datos del Cliente Borrados");
@@ -183,7 +183,7 @@ $(document).ready(function(){
 	 	
 		 $.ajax({
 			type:"GET",
-			url: "http://52.14.249.159:8080/microservicioClientes/clientes/listar/"+cedula_cliente,																																																		
+			url: "http://localhost:8080/clientes/listar/"+cedula_cliente,																																																		
 			success: function(response){
 				
 				const cliente = response[0];
@@ -223,7 +223,7 @@ $(document).ready(function(){
 			 	
 		 $.ajax({
 			type:"GET",
-			url: "http://52.14.249.159:8080/microservicioClientes/clientes/listar/"+cedula_usuario,
+			url: "http://localhost:8080/clientes/listar/"+cedula_usuario,
 			success: function(response){
 				 
 				const cliente = response[0];

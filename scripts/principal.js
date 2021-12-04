@@ -18,7 +18,6 @@ $(document).ready(function(){
 		
 	}
 	
-	
 	if(data !=1){
 		
 		//Usuario - no puede acceder a productos, clientes y proveedores
