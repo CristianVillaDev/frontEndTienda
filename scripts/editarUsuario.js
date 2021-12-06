@@ -58,7 +58,7 @@ $(document).ready(function(){
 
 		$.ajax({
 	            type: "PUT",
-	            url: "http://localhost:8080/usuarios/actualizar/"+data,
+	            url: "http://52.14.249.159:8080/microservicioProductos/usuarios/actualizar/"+data,
 	            async: false,
 	            data: JSON.stringify({ cedulaUsuario: $("#cedula").val(), emailUsuario: $("#email").val(),nombreUsuario:$("#nombre").val(),password: $("#clave").val(), usuario: $("#usuario").val()}),
 	            contentType: "application/json",
@@ -96,7 +96,7 @@ $(document).ready(function(){
 		
 		 $.ajax({
 			type:"GET",
-			url: "http://localhost:8080/usuarios/listar/"+data,
+			url: "http://52.14.249.159:8080/microservicioProductos/usuarios/listar/"+data,
 			success: function(response){
 				
 				console.log(response);

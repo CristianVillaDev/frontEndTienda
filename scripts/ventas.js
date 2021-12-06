@@ -7,7 +7,7 @@ $(document).ready(function(){
     
         $.ajax({
             type: "GET",
-            url: "http://localhost:8080/clientes/listar/" + cedula_cliente,
+            url: "http://52.14.249.159:8080/microservicioClientes/clientes/listar/" + cedula_cliente,
             success: function(response) {
                 let cliente = response[0];
                 if (Object.keys(response).length === 0) {
@@ -32,7 +32,7 @@ $(document).ready(function(){
     
         $.ajax({
             type: "GET",
-            url:  "http://localhost:8080/productos/listar/" + codigo_producto1,
+            url:  "http://52.14.249.159:8080/microservicioProductos/productos/listar/" + codigo_producto1,
             success: function(response) {
     
                 const producto1 = response[0];
@@ -75,7 +75,7 @@ $(document).ready(function(){
     
         $.ajax({
             type: "GET",
-            url:  "http://localhost:8080/productos/listar/" + codigo_producto2,
+            url:  "http://52.14.249.159:8080/microservicioProductos/productos/listar/" + codigo_producto2,
             success: function(response) {
     
                 const producto2 = response[0];
@@ -118,7 +118,7 @@ $(document).ready(function(){
     
         $.ajax({
             type: "GET",
-            url:  "http://localhost:8080/productos/listar/" + codigo_producto3,
+            url:  "http://52.14.249.159:8080/microservicioProductos/productos/listar/" + codigo_producto3,
             success: function(response) {
     
                 const producto3 = response[0];

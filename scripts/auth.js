@@ -29,7 +29,7 @@ $(document).ready(function(){
 			type:"POST",
 			async: false,
 			data: JSON.stringify({usuario:$("#usuario").val(), password:$("#password").val()}),
-			url: "http://localhost:8080/usuarios/auth",
+			url: "http://52.14.249.159:8080/microservicioProductos/usuarios/auth",
 			contentType: "application/json",
 			success: function(response){
 				

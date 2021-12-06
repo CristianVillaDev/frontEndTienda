@@ -60,7 +60,7 @@ $(document).ready(function(){
 		
 		$.ajax({
 			type:"GET",
-			url: "http://localhost:8080/usuarios/listar/"+data,
+			url: "http://52.14.249.159:8080/microservicioProductos/usuarios/listar/"+data,
 			contentType: "application/json",
 			success: function(data){
 
